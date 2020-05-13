@@ -1,0 +1,15 @@
+language: android
+dist: trusty
+android:
+  components:
+    - build-tools-29.0.3
+    - android-29
+
+script:
+  - ./gradlew :zeroauth:clean :zeroauth:assembleRelease
+
+deploy:
+  provider: script
+  script: ./gradlew :zeroauth:bintrayUpload
+  on:
+    branch: master
