@@ -1,4 +1,4 @@
-# Cielo Zero Auth
+# Cielo Zero Auth [![Build Status](https://travis-ci.com/DeveloperCielo/Zero-Auth.svg?branch=master)](https://travis-ci.com/DeveloperCielo/Zero-Auth) [![Download](https://api.bintray.com/packages/braspag/zero-auth/zero-auth/images/download.svg) ](https://bintray.com/braspag/zero-auth/zero-auth/_latestVersion)
 
 O **Zero Auth** é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização.
 
