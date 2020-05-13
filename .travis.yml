@@ -5,6 +5,9 @@ android:
     - build-tools-29.0.3
     - android-29
 
+before_install:
+  - chmod +x gradlew
+
 script:
   - ./gradlew :zeroauth:clean :zeroauth:assembleRelease
 
