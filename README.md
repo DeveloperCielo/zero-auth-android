@@ -49,7 +49,7 @@ dependencies {
 
 ### Inicialização
 
-É necessário ter uma instância de **CieloBinQuery**
+É necessário ter uma instância de **ZeroAuth**
 
 ```kotlin
 val zeroAuth = ZeroAuth(
