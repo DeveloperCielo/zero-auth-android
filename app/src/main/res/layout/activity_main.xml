@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Valid -->
+    <TextView
+        android:id="@+id/label_valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:text="@string/label_valid"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/valid_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_toEndOf="@+id/label_valid"
+        android:text="@string/placeholder_loading" />
+
+    <!-- Return Code -->
+    <TextView
+        android:id="@+id/label_return_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_valid"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:text="@string/label_return_code"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/return_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valid_result"
+        android:layout_toEndOf="@+id/label_return_code"
+        android:text="@string/placeholder_loading" />
+
+    <!-- Return Message -->
+    <TextView
+        android:id="@+id/label_return_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_return_code"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:text="@string/label_return_message"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/return_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_return_code"
+        android:layout_toEndOf="@+id/label_return_message"
+        android:text="@string/placeholder_loading" />
+
+    <!-- Issuer Transaction Id -->
+    <TextView
+        android:id="@+id/label_issuer_transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_return_message"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:text="@string/label_issuer_transaction_id"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/issuer_transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_return_message"
+        android:layout_toEndOf="@+id/label_issuer_transaction_id"
+        android:text="@string/placeholder_loading" />
+
+    <!-- Error Messages -->
+    <ListView
+        android:layout_below="@+id/issuer_transaction_id"
+        android:id="@+id/list_errors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
