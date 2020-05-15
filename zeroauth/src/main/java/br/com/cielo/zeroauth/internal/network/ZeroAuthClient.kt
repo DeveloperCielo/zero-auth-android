@@ -74,5 +74,3 @@ internal class ZeroAuthClient (private val merchantId: String, private val envir
         return "Bearer $this"
     }
 }
-
-fun ErrorResponse.toString() : String = "Code: ${this.code}\nMessage: ${this.message}"
