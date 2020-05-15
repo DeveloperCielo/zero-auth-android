@@ -19,10 +19,10 @@ O **Zero Auth** pode ser usado de 2 maneiras:
 
 Adicione esta dependência ao *build.gradle* do seu módulo dentro do nó dependencies 
 
-```kotlin
+```groovy
 dependencies {
-    ...
-    implementation 'br.com.cielo:zero-auth:1.0.0'
+    // ...
+    implementation 'br.com.cielo:zero-auth:LATEST-VERSION'
 }
 ```
 
@@ -30,9 +30,9 @@ dependencies {
 
 - Ou baixe *cielo-bin-query-release.aar* de [releases](https://github.com/DeveloperCielo/zero-auth/releases), mova para a pasta libs do seu módulo e adicione esta dependência ao *build.gradle* do seu módulo dentro do nó dependencies
 
-```kotlin
+```groovy
 dependencies {
-    ...
+    // ...
     implementation files('libs/zero-auth-release.aar')
 }
 ```
@@ -41,7 +41,7 @@ dependencies {
 
 É necessário ter adicionado ao **AndroidManifest.xml** do seu módulo a seguinte permissão:
 
-```kotlin
+```xml
     <uses-permission android:name="android.permission.INTERNET" />
 ```
 
@@ -54,6 +54,8 @@ dependencies {
 ```kotlin
 val zeroAuth = ZeroAuth(
     merchantId = "MERCHANT-ID",
+    clientId = "CLIENT-ID",
+    clientSecret = "CLIENT-SECRET",
     environment = Environment.SANDBOX
 )
 ```
@@ -64,7 +66,6 @@ A validação ocorre através do método **validate**, para isto, basta informar
 
 ```kotlin
 zeroAuth.validate(
-    accessToken = "ACCESS-TOKEN",
     zeroAuthRequest = ZeroAuthRequest(
         cardType = CardType.CREDIT_CARD,
         cardNumber = "1111222233334444",
