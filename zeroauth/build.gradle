@@ -12,10 +12,10 @@ ext {
 
     libraryDescription = 'O Zero Auth é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização.'
 
-    siteUrl = 'https://github.com/developercielo/zero-auth'
-    gitUrl = 'https://github.com/developercielo/zero-auth.git'
+    siteUrl = 'https://github.com/developercielo/zero-auth-android'
+    gitUrl = 'https://github.com/developercielo/zero-auth-android.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.1.0'
 
     developerId = 'mauricifj'
     developerName = 'Maurici Ferreira Junior'
@@ -77,6 +77,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation "com.squareup.okhttp3:okhttp:4.6.0"
     implementation 'com.squareup.okhttp3:logging-interceptor:4.6.0'
+
+    // OAuthCielo
+    implementation 'br.com.braspag:cieloecommerceoauth:1.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

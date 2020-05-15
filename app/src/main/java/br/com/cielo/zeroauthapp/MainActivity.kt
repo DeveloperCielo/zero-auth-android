@@ -15,12 +15,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val zeroAuth = ZeroAuth(
-            merchantId = "<MERCHANT-ID>",
+            merchantId = "MERCHANT-ID",
+            clientId = "CLIENT-ID",
+            clientSecret = "CLIENT-SECRET",
             environment = Environment.SANDBOX
         )
 
         zeroAuth.validate(
-            accessToken = "<ACCESS-TOKEN>",
             zeroAuthRequest = ZeroAuthRequest(
                 cardType = CardType.CREDIT_CARD,
                 cardNumber = "1111222233334444",
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             if (it.errors.isNotEmpty()) {
                 list_errors.adapter = ArrayAdapter(
                     this,
-                    android.R.layout.simple_list_item_2,
+                    android.R.layout.simple_list_item_1,
                     android.R.id.text1,
                     it.errors
                 )
