@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         ) {
-            Log.d("ZERO_AUTH_TAG", it.toString())
+            Log.d("CIELO_ZERO_AUTH", it.toString())
 
             if (it.result != null) {
                 with(it.result!!) {
