@@ -1,5 +1,6 @@
 package br.com.cielo.zeroauth.internal.network
 
+import br.com.braspag.cieloecommerceoauth.BuildConfig
 import br.com.cielo.zeroauth.*
 import br.com.cielo.zeroauth.models.ClientResult
 import br.com.cielo.zeroauth.models.ErrorResponse
@@ -19,7 +20,9 @@ internal class ZeroAuthClient (private val merchantId: String, private val envir
     ) {
         val webClient = WebClient(getEnvironmentUrl(environment))
 
-        val call = webClient.createService(ZeroAuthApi::class.java).validate(token.beared(), merchantId, request)
+        val xSdkVersion = BuildConfig.X_SDK_VERSION
+
+        val call = webClient.createService(ZeroAuthApi::class.java).validate(token.beared(), merchantId, xSdkVersion, request)
 
         call.enqueue(object : Callback<ZeroAuthResponse> {
             override fun onFailure(call: Call<ZeroAuthResponse>, t: Throwable) {

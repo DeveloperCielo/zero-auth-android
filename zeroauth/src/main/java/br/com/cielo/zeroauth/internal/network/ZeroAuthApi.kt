@@ -12,6 +12,7 @@ internal interface ZeroAuthApi {
     fun validate(
         @Header("Authorization") authorization: String,
         @Header("MerchantId") merchantId: String,
+        @Header("x-sdk-version") xSdkVersion: String,
         @Body request: ZeroAuthRequest,
         @Header("Content-Type") content_type: String = "application/json",
         @Header("Accept") accept: String = "application/json"
