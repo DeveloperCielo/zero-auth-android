@@ -12,4 +12,4 @@ deploy:
   provider: script
   script: ./gradlew :zeroauth:bintrayUpload
   on:
-    branch: master
+    tags: true
