@@ -49,7 +49,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField('String', 'X_SDK_VERSION', "\"CieloZeroAuth@$libraryVersion\"")
+        it.buildConfigField('String', 'X_SDK_VERSION', "\"CieloZeroAuth-Android@$libraryVersion\"")
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
