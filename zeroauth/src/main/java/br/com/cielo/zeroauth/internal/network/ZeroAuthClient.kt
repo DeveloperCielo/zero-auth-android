@@ -1,6 +1,6 @@
 package br.com.cielo.zeroauth.internal.network
 
-import br.com.braspag.cieloecommerceoauth.BuildConfig
+import br.com.cielo.zeroauth.BuildConfig
 import br.com.cielo.zeroauth.*
 import br.com.cielo.zeroauth.models.ClientResult
 import br.com.cielo.zeroauth.models.ErrorResponse
